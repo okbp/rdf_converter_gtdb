@@ -1,0 +1,11 @@
+#version: '3.2'
+services:
+  ruby:
+    container_name: togomedium_gtdb_convertor
+    build:
+      context: .
+      dockerfile: Dockerfile
+    image: togomedium_gtdb_convertor
+    volumes:
+      - ${PWD}/bin:/usr/src/app/bin
+      - ${PWD}/data:/data
